@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        node {
-            label "dockerrr"
-        }
-    }
+    agent any
 
     stages {
         stage('Build') {
