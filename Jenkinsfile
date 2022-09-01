@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        node {
+            label "dockerrr"
+        }
+    }
 
     stages {
         stage('Build') {
@@ -17,6 +21,12 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('test') {
+            step {
+                script {
+                    container("dockerrr") {
+                        sh docker login -u "tryb1221" -p "tryb1221@"
+                        sh docker pull tryb1221/test:tagname
     }
     post {
         always {
