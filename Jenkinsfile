@@ -22,7 +22,7 @@ pipeline {
             }
         }
         stage('test') {
-            step {
+            steps {
                 script {
                     container("dockerrr") {
                         sh 'docker login -u "tryb1221" -p "tryb1221@"'
