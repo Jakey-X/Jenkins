@@ -23,12 +23,8 @@ pipeline {
         }
         stage('test') {
             steps {
-                script {
-                    container("dockerrr") {
-                        sh 'docker login -u "tryb1221" -p "tryb1221@"'
-                        sh 'docker pull tryb1221/test:tagname'
-                    }
-                }
+                sh 'docker login -u "tryb1221" -p "tryb1221@"'
+                sh 'docker pull tryb1221/test:tagname'
             }
         }
     }
