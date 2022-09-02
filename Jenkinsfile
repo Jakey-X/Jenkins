@@ -1,8 +1,7 @@
 pipeline {
-    agent {
-        node {
-            label "aaa"
-        }
+    agent { label 'aaa' }
+    options {
+        skipDefaultCheckout(true)
     }
 
     stages {
