@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'aaa' }
+    agent { label 'dockerrr' }
     options {
         skipDefaultCheckout(true)
     }
